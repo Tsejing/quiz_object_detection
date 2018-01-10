@@ -45,9 +45,6 @@ import functools
 import json
 import os
 import tensorflow as tf
-import sys
-
-sys.path.insert(0, '../quiz_object_detection')
 
 from object_detection import trainer
 from object_detection.builders import input_reader_builder

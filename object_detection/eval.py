@@ -46,9 +46,6 @@ Example usage:
 import functools
 import os
 import tensorflow as tf
-import sys
-
-sys.path.insert(0, '../quiz_object_detection')
 
 from object_detection import evaluator
 from object_detection.builders import input_reader_builder

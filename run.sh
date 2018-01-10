@@ -4,7 +4,7 @@
 DIR=$PWD
 cd $DIR
 echo current dir is $PWD
-
+protoc object_detection/protos/*.proto --python_out=.
 # 设置目录，避免module找不到的问题
 export PYTHONPATH=$PYTHONPATH:$DIR:$DIR/slim:$DIR/object_detection
 

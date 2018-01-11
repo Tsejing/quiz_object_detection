@@ -15,5 +15,6 @@ def allFiles(root, patterns = '*', single_level = False, yield_folders = False):
         #only deal one level of the dir
         if single_level:
             break
+print("datasetName: ")
 for name in allFiles('weixin-39265957/quiz-w8-data/', single_level = True):
-    print(name)
+    print("name: "name)

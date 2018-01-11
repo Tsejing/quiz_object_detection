@@ -16,5 +16,5 @@ def allFiles(root, patterns = '*', single_level = False, yield_folders = False):
         if single_level:
             break
 print("datasetName: ")
-for name in allFiles('weixin-39265957/quiz-w8-data/', single_level = True):
+for name in allFiles('/data/weixin-39265957/quiz-w8-data/', single_level = True):
     print("name: "name)

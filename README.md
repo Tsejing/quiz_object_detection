@@ -83,7 +83,7 @@ protoc object_detection/protos/*.proto --python_out=.
 
 https://www.tinymind.com/executions/av5vw5mj
 
-![output](.\output.png)
+![output](https://github.com/Baageer/quiz_object_detection/blob/master/output.png)
 
 
 

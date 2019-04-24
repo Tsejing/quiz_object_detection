@@ -46,7 +46,7 @@ if __name__ == '__main__':
         return np.array(image.getdata()).reshape(
             (im_height, im_width, 3)).astype(np.uint8)
 
-    test_img_path = os.path.join(FLAGS.dataset_dir, 'car_test.jpg')
+    test_img_path = os.path.join(FLAGS.dataset_dir, 'car_test.png')
 
     with detection_graph.as_default():
         with tf.Session(graph=detection_graph) as sess:

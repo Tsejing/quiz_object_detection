@@ -27,7 +27,7 @@ if __name__ == '__main__':
     FLAGS, unparsed = parse_args()
 
     PATH_TO_CKPT = os.path.join(FLAGS.output_dir, 'exported_graphs/frozen_inference_graph.pb')
-    PATH_TO_LABELS = os.path.join(FLAGS.dataset_dir, 'labels_items.txt')
+    PATH_TO_LABELS = os.path.join(FLAGS.dataset_dir, 'labels_rm.txt')
 
     detection_graph = tf.Graph()
     with detection_graph.as_default():
@@ -46,7 +46,7 @@ if __name__ == '__main__':
         return np.array(image.getdata()).reshape(
             (im_height, im_width, 3)).astype(np.uint8)
 
-    test_img_path = os.path.join(FLAGS.dataset_dir, 'test.jpg')
+    test_img_path = os.path.join(FLAGS.dataset_dir, 'car_test.jpg')
 
     with detection_graph.as_default():
         with tf.Session(graph=detection_graph) as sess:

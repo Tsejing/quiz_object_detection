@@ -26,7 +26,7 @@ rm -rvf $output_dir/*
 # 因为dataset里面的东西是不允许修改的，所以这里要把config文件复制一份到输出目录
 cp $DIR/$config $pipeline_config_path
 python ./dataset_path.py
-for i in {0..99}  # for循环中的代码执行5此，这里的左右边界都包含，也就是一共训练500个step，每100step验证一次
+for i in {0..4}  # for循环中的代码执行5此，这里的左右边界都包含，也就是一共训练500个step，每100step验证一次
 do
     echo "############" $i "runnning #################"
     last=$[$i*100]
@@ -44,4 +44,4 @@ done
 python ./object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path $pipeline_config_path --trained_checkpoint_prefix $train_dir/model.ckpt-$current  --output_directory $output_dir/exported_graphs
 
 # 在test.jpg上验证导出的模型
-#python ./inference.py --output_dir=$output_dir --dataset_dir=$dataset_dir
+python ./inference.py --output_dir=$output_dir --dataset_dir=$dataset_dir

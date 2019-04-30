@@ -21,7 +21,7 @@ config=ssd_mobilenet_v1_pets1.config
 pipeline_config_path=$output_dir/$config
 
 # 先清空输出目录，本地运行会有效果，tinymind上运行这一行没有任何效果
-rm -rvf $output_dir/*
+#rm -rvf $output_dir/*
 
 # 因为dataset里面的东西是不允许修改的，所以这里要把config文件复制一份到输出目录
 cp $DIR/$config $pipeline_config_path
